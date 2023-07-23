@@ -1,7 +1,11 @@
 {
-  "index": "📈 Web3 docs",
-  "start": "▶️ Start From Here",
-  "NFT": "🦧 NFT",
+  "index": "📈 Web3 docs 🟢",
+  "start": "▶️ Start From Here 🟠",
+  "wallet": "💳 Wallet",
+  "decentralized-storage":"📼 Decentralized Storage",
+  "solidity": "📝 Solidity 🔴",
+  "nft": "🦧 NFT 🔴",
+  "token": "💸 TOKEN 🔴",
   "about": {
     "title": "About",
     "type": "page"
