@@ -2,15 +2,26 @@
 
 <iframe width="800" height="480" src="https://www.youtube.com/embed/5Uj6uR3fp-U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The Internet has become an essential tool for our daily lives, used for media consumption, communication, learning, managing finances, and more. However, the web as we know it has a problem: data centralization. Everything is stored on large servers, typically controlled by a single company. This centralization leads to issues like censorship and single points of failure.
+The Internet has become an essential tool in our daily lives. We use it for media consumption, communication, learning, managing our finances, and more. However, the web as we know it has a problem: data centralization. Everything is stored on large servers, usually controlled by a single company. 
 
-> **Technical Insight 💡:** The Interplanetary File System (IPFS) aims to solve these problems by creating a completely distributed web using peer-to-peer (P2P) networks, similar to BitTorrent. It shifts from "location-based addressing" to "content-based addressing". Each file has a unique hash, and when you want to download a file, you ask the network: "who has the file with this hash?" This approach ensures built-in security and efficient network operation by eliminating duplication.
+> **Technical Insight 💡:** The current web model is based on "location-based addressing". This means that when you want to download a file, you tell your computer where to find it. If the server is offline, you won't get the file, even if someone else has downloaded it before and still has a copy.
 
-IPFS also takes into account different versions of your files, creating a new "commit object" for each version. This makes IPFS an immutable database, much like a blockchain. However, IPFS has its limitations. The biggest challenge is keeping files available. If all nodes storing a specific file go offline, the file becomes unavailable. 
+This centralization leads to another issue: censorship. Since data is available on only a few servers, it's easy for a government to block access. For instance, in 2017, Turkey ordered ISPs to block access to Wikipedia, considering it a "threat to national security".
 
-Filecoin, created by the same people behind IPFS, is a blockchain built on IPFS aiming to create a decentralized storage market. It incentivizes nodes to keep files online as long as possible and ensures files are duplicated across multiple nodes to prevent unavailability.
+But why do we continue to use this model? It's because we have high expectations for the web. We want instant, high-quality pages, images, and videos. Centralized servers allow companies to control the speed of content delivery. Another reason is that there isn't a fast alternative. But that could change!
 
-> **Curiosity 🧐:** IPFS has been used in real-world applications to circumvent censorship. For instance, when the Turkish government blocked access to Wikipedia in 2017, the people behind IPFS responded by putting a copy of Turkish Wikipedia on IPFS. Since IPFS is distributed and there's no central server, the government couldn't block it.
+Meet IPFS, the Interplanetary File System. It aims to make the web completely distributed using P2P networks, similar to BitTorrent. 
 
-IPFS could even be used to distribute parts of the internet between multiple planets, hence its name "Interplanetary File System". For example, if we had a base on Mars, a large part of the internet could be stored on Mars using IPFS. This would allow for much faster access to web pages, as the data wouldn't have to travel between Earth and Mars.
+> **Curiosity 🧐:** IPFS is named "Interplanetary File System" because it could potentially work between different planets. For instance, if we had a base on Mars, IPFS could be used to distribute parts of the internet there, reducing the time it takes to load a webpage from Earth.
 
+IPFS switches from "location-based addressing" to "content-based addressing". Instead of telling your computer where to find a resource, you just tell it what you want. Each file has a unique hash, like a fingerprint. When you want to download a file, you ask the network: "Who has the file with this hash?" and someone on the IPFS network will provide it.
+
+IPFS also takes into account different versions of your files. When you update a file, IPFS creates a new "commit object" for you. This object tells IPFS which commit came before and links it to your file's IPFS object. This process can be repeated endlessly, ensuring that your file and its entire history are accessible to other network nodes.
+
+However, IPFS has its limitations. The biggest problem is keeping files available. Each network node caches the files it has downloaded and makes them available to others. But if a specific file is kept by a few nodes and they go offline, the file becomes unavailable. 
+
+Filecoin, created by the same people behind IPFS, is trying to solve this problem. It's a blockchain built on IPFS aiming to create a decentralized storage market. If you have free space, you can rent it to others and earn money. Filecoin encourages nodes to keep files online as long as possible, as they won't get a reward otherwise.
+
+In conclusion, IPFS is an ambitious project that could lead us towards a truly decentralized internet. 
+
+Subscribe for more videos like this and, as always, thank you for watching!
