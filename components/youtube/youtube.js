@@ -20,11 +20,14 @@ class YouTubeVideo extends React.Component {
         setTimeout(() => {
             this.player = new window.YT.Player(`youtube-video-${this.props.videoId}`, {
                 videoId: this.props.videoId,
+                width: '100%',
                 playerVars: {
                     controls: 0,
                     modestbranding: 1,
                     rel: 0,
-                    showinfo: 0
+                    showinfo: 0,
+                    cc_load_policy: 1
+
                 },
                 events: {
                     onReady: this.onPlayerReady,
@@ -58,14 +61,13 @@ class YouTubeVideo extends React.Component {
         }
     }
 
-    handlePlay = () => {
-        this.player.playVideo();
+    handlePlayPause = () => {
+        if (this.player.getPlayerState() === window.YT.PlayerState.PLAYING) {
+            this.player.pauseVideo();
+        } else {
+            this.player.playVideo();
+        }
     }
-
-    handlePause = () => {
-        this.player.pauseVideo();
-    }
-
     handleRewind = () => {
         let currentTime = this.player.getCurrentTime();
         if (currentTime > this.props.startTime) {
@@ -88,8 +90,7 @@ class YouTubeVideo extends React.Component {
                     <div className={styles.blocker}></div>
                 </div>
                 <Controls
-                    onPlay={this.handlePlay}
-                    onPause={this.handlePause}
+                    onPlayPause={this.handlePlayPause}
                     onRewind={this.handleRewind}
                     onForward={this.handleForward}
                 />
