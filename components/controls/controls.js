@@ -24,36 +24,41 @@ class Controls extends React.Component {
 
     return (
       <div className={styles.controls}>
-        <button className={styles.button} onClick={this.props.onRewind}>
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={faBackward}
-          ></FontAwesomeIcon>
-        </button>
+        <button className={styles.subtitles}>CC</button>
 
-        <button className={styles.button} onClick={this.handlePlayPause}>
-          {isPlaying ? (
-            <>
-              <FontAwesomeIcon
-                className={styles.icon}
-                icon={faPause}
-              ></FontAwesomeIcon>
-            </>
-          ) : (
-            <>
-              <FontAwesomeIcon
-                className={styles.icon}
-                icon={faPlay}
-              ></FontAwesomeIcon>
-            </>
-          )}
-        </button>
-        <button className={styles.button} onClick={this.props.onForward}>
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={faForward}
-          ></FontAwesomeIcon>
-        </button>
+        <div className={styles.statusVideoControls}>
+          <button className={styles.button} onClick={this.props.onRewind}>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={faBackward}
+            ></FontAwesomeIcon>
+          </button>
+
+          <button className={styles.playButton} onClick={this.handlePlayPause}>
+            {isPlaying ? (
+              <>
+                <FontAwesomeIcon
+                  className={styles.icon}
+                  icon={faPause}
+                ></FontAwesomeIcon>
+              </>
+            ) : (
+              <>
+                <FontAwesomeIcon
+                  className={styles.icon}
+                  icon={faPlay}
+                ></FontAwesomeIcon>
+              </>
+            )}
+          </button>
+          <button className={styles.button} onClick={this.props.onForward}>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={faForward}
+            ></FontAwesomeIcon>
+          </button>
+        </div>
+        <button className={styles.button}>CC</button>
       </div>
     );
   }
