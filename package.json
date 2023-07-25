@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"  },
+    "start": "next start"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Burneeble/web3-docs.git"
   },
-
   "homepage": "https://github.com/Burneeble/web3-docs.git",
   "dependencies": {
     "next": "^13.0.6",
@@ -21,6 +21,12 @@
   },
   "devDependencies": {
     "@types/node": "18.11.10",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.3",
+    "@fortawesome/fontawesome-free": "^6.1.2",
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0"
   }
 }
