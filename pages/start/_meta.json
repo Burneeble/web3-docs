@@ -1,7 +1,10 @@
 {
   "blockchain-overview": "Blockchain Overview 🧱💡",
   "ethereum": "Ethereum 💎",
+  "faucet":"Faucet",
+  "etherscan": "Etherscan 🔍🌐",
   "gas": "Gas ⛽️",
-  "smart-contract":"Smart Contract 📄💡",
-  "etherscan":"Etherscan 🔍🌐"
+  "exploring-transaction":"Exploring Transaction",
+  "transactions":"Transactions",
+  "smart-contract":"Smart Contract 📄💡"
 }
