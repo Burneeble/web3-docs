@@ -2,8 +2,9 @@
 .playerWrapper {
     position: relative;
     padding-bottom: 56.25%;
-    /* 16:9 */
     height: 0;
+    aspect-ratio: 16/9;
+
 }
 
 .videoContainer {
@@ -11,7 +12,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
 }
 
 .blocker {
@@ -19,6 +19,5 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     z-index: 1;
 }
