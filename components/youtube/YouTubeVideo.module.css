@@ -4,20 +4,33 @@
     padding-bottom: 56.25%;
     height: 0;
     aspect-ratio: 16/9;
-
+    pointer-events: none;
 }
 
 .videoContainer {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
+    aspect-ratio: 16/9 !important;
+    z-index: 1;
+
 }
+
 
 .blocker {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+.youtubeFrame {
+    display: block;
+    height: 100% !important;
+    vertical-align: unset !important;
+
 }
