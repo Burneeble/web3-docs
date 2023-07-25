@@ -21,7 +21,6 @@ class YouTubeVideo extends React.Component {
             this.player = new window.YT.Player(`youtube-video-${this.props.videoId}`, {
                 videoId: this.props.videoId,
                 width: '100%',
-                height:'480px',
                 playerVars: {
                     controls: 0,
                     modestbranding: 1,
