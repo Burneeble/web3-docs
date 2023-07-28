@@ -1,0 +1,77 @@
+## 1. Making the Zombie Factory (Your first Contract)
+
+### Introduction: [CryptoZombies 1 LESSON](https://cryptozombies.io/en/lesson/1/chapter/1)
+
+You're going to build a "Zombie Factory" (your first contract) able to build an army of zombies:
+
+- Our contract will maintain a database of all zombies in our army;
+- Our contract will have a function for creating new zombies;
+- Each zombie will have a random and unique appearance which will be based on its DNA.
+  `8356281049284737`
+
+Its DNA is simple — it's a 16-digit integer, different parts of this number will map to different traits.
+
+### Summary:
+
+Solidity's code is encapsulated in **contracts**.
+
+> Contracts
+> A `contract` is the fundamental building block of Ethereum applications — all variables and functions belong to a contract
+
+All solidity source code should start with a "**version pragma**" — a declaration of the version of the Solidity compiler this code should use.
+
+```
+   pragma solidity >=0.5.0 <0.6.0;
+
+   contract ZombieFactory {
+   //contract body
+   }
+```
+
+**State variables** are permanently stored in contract storage. This means they are written to the Ethereum blockchain. These variables are declared using the `uint` data type, its value must be non-negative.
+
+```
+    contract ZombieFactory {
+    // This will be stored permanently in the blockchain
+      uint dnaDigits =  16;
+    }
+```
+
+> Different uint:
+> In Solidity, uint is actually an alias for uint256, a 256-bit unsigned integer. You can declare uints with less bits — uint8, uint16, uint32, etc.. But in general you want to simply use uint except in specific cases, which we'll talk about in later lessons.
+
+Among the most basic **math operations** that solidity supports (such as sum, difference, etc.) we mention:
+
+- Exponential operator (i.e. x^y):
+  `uint x = 5 ** 2; // equal to 5^2 = 25`
+
+- Modulus / remainder: **x % y** (for example, 13 % 5 is 3, because if you divide 5 into 13, 3 is the remainder)
+
+Solidity provides **_structs_** allow you to create more complicated data types that have multiple properties:
+
+```
+struct Zombie {
+  string name;
+  uint dna;
+}
+```
+
+There are two types of arrays in Solidity: **fixed arrays and dynamic arrays:**
+
+```
+// Array with a fixed length of 2 elements:
+uint[2] fixedArray;
+
+// a dynamic Array - has no fixed size, can keep growing:
+uint[] dynamicArray;
+
+// a dynamic Array of struct:
+Person[] people;
+```
+
+You can declare an **array as public**, Other contracts would then be able to read from, but not write to, this array. So this is a useful pattern for storing public data in your contract
+
+```
+// a dynamic public Array of struct:
+Person[] public people;
+```
