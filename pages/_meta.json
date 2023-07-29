@@ -1,8 +1,9 @@
 {
-  "index": "📈 Web3 docs 🟢",
+  "index": "📈 Welcome to Web3 Docs 🟢",
+  "web3": "💻 Web3: Overview 💎",
   "wallet": "💳 Wallet 🔴",
   "start": "▶️ Start From Here 🟠",
-  "decentralized-storage":"📼 Decentralized Storage",
+  "decentralized-storage": "📼 Decentralized Storage",
   "solidity": "📝 Solidity 🔴",
   "nft": "🦧 NFT 🔴",
   "token": "💸 TOKEN 🔴",
