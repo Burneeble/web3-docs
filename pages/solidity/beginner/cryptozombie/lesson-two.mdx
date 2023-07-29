@@ -9,7 +9,7 @@ In lesson 2, we're going to make our app more game-like:
 
 ## Summary
 
-During lesson 2 the main arguments you will face are the following:
+During lesson 2 the main topics you will face are the following:
 
 ### 1. Addresses and Mappings:
 
@@ -27,7 +27,7 @@ mapping (uint => string) public userIdToName;
 
 ### 2. Understanding `msg.sender`:
 
-`msg.sender` is a global variable representing the caller's address (person or smart contract) of the current function. It allows contracts to identify the interacting entity.
+`msg.sender` is a **global variable** representing the caller's address (person or smart contract) of the current function. It allows contracts to identify the interacting entity.
 
 ```solidity
 mapping (address => uint) favoriteNumber;
@@ -94,7 +94,7 @@ contract NewContract is SomeOtherContract {
 
 ### 6. Data Location - Storage vs. Memory:
 
-Solidity has two locations to store variables: storage and memory. Storage variables are permanently stored on the blockchain, while memory variables are temporary and erased between external function calls.
+Solidity has two locations to store variables: **storage** and **memory**. Storage variables are permanently stored on the blockchain, while memory variables are temporary and erased between external function calls.
 
 ```solidity
 import "./someothercontract.sol";
@@ -153,7 +153,9 @@ contract MyContract {
 
 ### 9. Handling Multiple Return Values:
 
-Functions can return multiple values in Solidity. Use multiple assignment to retrieve and store multiple return values, allowing efficient work with functions providing multiple results.
+Functions can return multiple values in Solidity.
+
+Use multiple assignment to retrieve and store multiple return values, allowing efficient work with functions providing multiple results.
 
 ```solidity
 function multipleReturns() internal returns(uint a, uint b, uint c) {
