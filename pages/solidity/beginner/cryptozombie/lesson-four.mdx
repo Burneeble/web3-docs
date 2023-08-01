@@ -22,8 +22,6 @@ Here's a simple example:
 contract OnlineStore {
   function buySomething() external payable {
     require(msg.value == 0.001 ether); // Check if 0.001 ether was sent
-    // Perform logic for the purchase
-    // Transfer a digital item to the caller's address (msg.sender)
   }
 }
 ```
@@ -49,6 +47,11 @@ contract GetPaid is Ownable {
   Note that we're using `owner()` and `onlyOwner` from the `Ownable` contract,
   assuming that was imported.
 </Callout>
+
+- The `withdraw` function is specified as `external`, meaning it can be called from outside the contract.
+- The `onlyOwner` modifier from the `Ownable` contract restricts access to the `withdraw` function, ensuring only the contract owner can initiate withdrawals.
+- To use the `transfer` function, the target address must be of type `address payable`. In this example, we cast the owner's address to `address payable` using `address(uint160(owner()))`.
+- `address(this).balance` returns the total balance stored in the contract, which includes all the Ether sent by users to the contract.
 
 ### Random Numbers
 
