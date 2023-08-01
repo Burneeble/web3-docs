@@ -1,5 +1,6 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import "./pages/_app";
 
 const config: DocsThemeConfig = {
   logo: <span>Web3 Docs</span>,
